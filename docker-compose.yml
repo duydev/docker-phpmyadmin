@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: 'phpmyadmin/phpmyadmin'
+    ports:
+      - '80'
+    environment:
+      PMA_ARBITRARY: 1
+      VIRTUAL_HOST: 'pma.local'
+networks:  
+  default:
+    external:
+      name: nginx-net
